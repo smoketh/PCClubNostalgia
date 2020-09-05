@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LockWin_CWHTML01_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML01_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_SOUND_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_SOUND_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_HTML_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_HTML_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_COPYREC_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_COPYREC_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_USLUG_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_USLUG_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML13_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML13_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML04_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML04_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_BCHECK_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_BCHECK_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_ENGL_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_ENGL_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML08_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML08_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_KEY_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_KEY_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_MENU_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_MENU_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML05_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML05_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML02_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML02_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_FIRSTPAG_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_FIRSTPAG_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_EXIT_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_EXIT_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML12_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML12_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_LOOK_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_LOOK_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML15_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML15_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_BNOCHECK_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_BNOCHECK_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML03_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML03_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_REFR_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_REFR_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_LOCKWIN_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_LOCKWIN_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_ARREND_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_ARREND_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_LOCK_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_LOCK_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_RUN_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_RUN_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_SETUP2_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_SETUP2_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML06_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML06_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_ARRUP_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_ARRUP_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_RUSS_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_RUSS_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_STOP_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_STOP_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_ARRBEG_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_ARRBEG_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_LOGOFF_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_LOGOFF_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_NOT_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_NOT_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_EXPLORER_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_EXPLORER_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CHANGE_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CHANGE_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML07_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML07_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_NONWORK_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_NONWORK_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CALENDAR_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CALENDAR_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_ERASER_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_ERASER_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_1_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_1_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_MAKE_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_MAKE_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_USLUG32_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_USLUG32_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_SAVE_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_SAVE_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_ARRDOWN_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_ARRDOWN_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML10_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML10_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_INSERT_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_INSERT_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CANCEL_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CANCEL_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_RESTART_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_RESTART_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CHECKALL_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CHECKALL_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CHECKNO_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CHECKNO_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_SETUP_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_SETUP_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_INFO_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_INFO_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_SELECT_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_SELECT_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_FOLDOPEN_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_FOLDOPEN_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_HOME_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_HOME_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_HELP_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_HELP_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_HINTS_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_HINTS_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML14_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML14_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_LOCKOFF_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_LOCKOFF_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_LASTPAGE_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_LASTPAGE_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_RULER_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_RULER_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_BLANK_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_BLANK_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_DELETE_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_DELETE_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CHAIN_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CHAIN_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML11_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML11_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_PRLIST_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_PRLIST_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_USER1_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_USER1_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_VIEW_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_VIEW_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CWHTML09_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CWHTML09_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_OK_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_OK_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_SCRIPT32_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_SCRIPT32_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_REPORT_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_REPORT_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_SHUTDOWN_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_SHUTDOWN_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_COLOR_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_COLOR_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_CLOSE_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_CLOSE_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockWin_TDKZZIP_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockWin_TDKZZIP_ICO.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D01.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D11.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D21.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D31.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D41.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D51.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D61.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D71.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D81.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="D9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\D91.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DD1.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DH1.GIF;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CriminalEnormousChipmunk_size_restricted" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CriminalEnormousChipmunk-size_restricted.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Notify" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Notify.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotifyClean" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotifyClean.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

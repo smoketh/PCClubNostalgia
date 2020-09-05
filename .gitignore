@@ -1,0 +1,17 @@
+# All platforms
+/data/
+*.log
+
+# Linux - Makefile
+/.build/
+*.exe
+
+# Windows - Visual Studio
+Temporary/
+Release/
+Debug/
+x64/
+.vs/
+packages/
+*.user
+/proj/vs2019/packages
