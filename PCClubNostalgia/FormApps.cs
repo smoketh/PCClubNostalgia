@@ -29,11 +29,11 @@ namespace PCClubNostalgia
             Rebind();
             //dataGridMain.DataSource = tParent.paths.FindAll();
             //tParent.vcfg.pcNumber = (int)
-            numericUpDown1.Value = tParent.vcfg.pcNumber;
-            tbUsrName.Text = tParent.vcfg.nick;
-            tbTraffic.Text = tParent.vcfg.traffic;
-            tbTimeLabel.Text = tParent.vcfg.timeStatus;
-            tbMessage.Text = tParent.vcfg.message;
+            numericUpDown1.Value = tParent.config.pcNumber;
+            tbUsrName.Text = tParent.config.nick;
+            tbTraffic.Text = tParent.config.traffic;
+            tbTimeLabel.Text = tParent.config.timeStatus;
+            tbMessage.Text = tParent.config.message;
 
         }
 
@@ -47,16 +47,18 @@ namespace PCClubNostalgia
             
             glacialList1.Items.Clear();
             //dataGridMain.DataSource = new List<AppPather>();
-            if (tParent.paths.Count() != 0)
+            if (tParent.config.paths.Count() != 0)
             {
-                var lst=tParent.paths.FindAll().ToList();
-                foreach(AppPather appath in lst)
+                //var lst=tParent.config.paths.FindAll().ToList();
+                foreach(AppPather appath in tParent.config.paths)
                 {
                     var item = this.glacialList1.Items.Add(appath.category);
                     item.SubItems[1].Text = appath.name;
                     //(item.SubItems[1].Control as TextBox).LostFocus += UpdateDB;
                     item.SubItems[2].Text = appath.path;
                     item.SubItems[4].Text = appath.iconPath;
+                    item.SubItems[6].Text = appath.iconIndex.ToString();
+                    item.SubItems[7].Text = appath.launchParams;
                     item.Tag = appath.Id;
                     
                 }
@@ -71,19 +73,23 @@ namespace PCClubNostalgia
 
         private void FormApps_FormClosed(object sender, FormClosedEventArgs e)
         {
-            tParent.paths.DeleteAll();
+            tParent.config.paths.Clear();
             foreach(GLItem item in glacialList1.Items)
             {
-
+                int resultIndex;
+                var iconParseSucc = int.TryParse(item.SubItems[6].Text, out resultIndex);
+                if (iconParseSucc == false) resultIndex = 0;
 
                 AppPather updated = new AppPather()
                 {
                     category = item.SubItems[0].Text,
                     name = item.SubItems[1].Text,
                     path = item.SubItems[2].Text,
-                    iconPath = item.SubItems[4].Text
+                    iconPath = item.SubItems[4].Text,
+                    iconIndex = resultIndex,
+                    launchParams = item.SubItems[7].Text
                 };
-                tParent.paths.Insert(updated);
+                tParent.config.paths.Add(updated);
                 /*if (item.Tag !=null)
                 {
                     updated.Id= item.Tag as LiteDB.ObjectId;
@@ -96,13 +102,14 @@ namespace PCClubNostalgia
 
             }
             label1.Focus();
-            tParent.vcfg.pcNumber=(int)numericUpDown1.Value;
-            tParent.vcfg.nick = tbUsrName.Text;
-            tParent.vcfg.traffic = tbTraffic.Text;
-            tParent.vcfg.timeStatus = tbTimeLabel.Text;
-            tParent.vcfg.message = tbMessage.Text;
-            tParent.vcfgc.DeleteAll();
-            tParent.vcfgc.Insert(tParent.vcfg);
+            tParent.config.pcNumber=(int)numericUpDown1.Value;
+            tParent.config.nick = tbUsrName.Text;
+            tParent.config.traffic = tbTraffic.Text;
+            tParent.config.timeStatus = tbTimeLabel.Text;
+            tParent.config.message = tbMessage.Text;
+            tParent.SaveRegularConfig();
+            //tParent.config.DeleteAll();
+            //tParent.config.Insert(tParent.vcfg);
             this.Owner.Enabled = true;
             //tParent.AddApps();
         }
@@ -155,6 +162,8 @@ namespace PCClubNostalgia
             item.SubItems[1].Text = "Notepad";
             item.SubItems[2].Text = @"C:\Windows\notepad.exe";
             item.SubItems[4].Text = @"C:\Windows\notepad.exe";
+            item.SubItems[6].Text = "0";
+            item.SubItems[7].Text = "";
             this.glacialList1.Invalidate();
             //this.glacialList1.Update();
         }
@@ -162,9 +171,11 @@ namespace PCClubNostalgia
         private void btnRemove_Click(object sender, EventArgs e)
         {
             if ((int)glacialList1.SelectedIndicies.Count == 0) return;
-            var test = glacialList1.Items[(int)glacialList1.SelectedIndicies[0]].Tag; //(glacialList1.SelectedItems[0] as GLItem).Tag;
-            if(test!=null)
-                tParent.paths.Delete(test as LiteDB.ObjectId);
+            var test = (Guid)glacialList1.Items[(int)glacialList1.SelectedIndicies[0]].Tag; //(glacialList1.SelectedItems[0] as GLItem).Tag;
+            if (test != null)
+            {
+                var cItm=tParent.config.paths.Find(x => x.Id == test);
+            }
 
             glacialList1.Items.RemoveAt((int)glacialList1.SelectedIndicies[0]);
             this.glacialList1.Invalidate();
@@ -217,6 +228,14 @@ namespace PCClubNostalgia
         {
             glacialList1.Items[(int)glacialList1.SelectedIndicies[0]].SubItems[4].Text =
                 openFileDialog2.FileNames[0];
+            string cFile;
+            int cIndex;
+            bool iconPicked=IconPicker.Show(this.Handle, out cFile, out cIndex, openFileDialog2.FileNames[0]);
+            if(iconPicked)
+            {
+                glacialList1.Items[(int)glacialList1.SelectedIndicies[0]].SubItems[4].Text = cFile;
+                glacialList1.Items[(int)glacialList1.SelectedIndicies[0]].SubItems[6].Text = cIndex.ToString();
+            }
         }
 
         private void btnIconSelect_Click(object sender, EventArgs e)
@@ -259,6 +278,11 @@ namespace PCClubNostalgia
             btnFileSelect.Location = new Point(glacialList1.Left + rect.Left, glacialList1.Top + rect.Top);
             var rect2= glacialList1.Items[index].SubItems[5].LastCellRect;
             btnIconSelect.Location = new Point(glacialList1.Left + rect2.Left, glacialList1.Top + rect2.Top);
+        }
+
+        private void glacialList1_Click(object sender, EventArgs e)
+        {
+
         }
 
         /*private void numericUpDown1_ValueChanged(object sender, EventArgs e)

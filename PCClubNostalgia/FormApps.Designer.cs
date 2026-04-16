@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            GlacialComponents.Controls.GLColumn glColumn1 = new GlacialComponents.Controls.GLColumn();
-            GlacialComponents.Controls.GLColumn glColumn2 = new GlacialComponents.Controls.GLColumn();
-            GlacialComponents.Controls.GLColumn glColumn3 = new GlacialComponents.Controls.GLColumn();
-            GlacialComponents.Controls.GLColumn glColumn4 = new GlacialComponents.Controls.GLColumn();
-            GlacialComponents.Controls.GLColumn glColumn5 = new GlacialComponents.Controls.GLColumn();
-            GlacialComponents.Controls.GLColumn glColumn6 = new GlacialComponents.Controls.GLColumn();
+            GlacialComponents.Controls.GLColumn glColumn9 = new GlacialComponents.Controls.GLColumn();
+            GlacialComponents.Controls.GLColumn glColumn10 = new GlacialComponents.Controls.GLColumn();
+            GlacialComponents.Controls.GLColumn glColumn11 = new GlacialComponents.Controls.GLColumn();
+            GlacialComponents.Controls.GLColumn glColumn12 = new GlacialComponents.Controls.GLColumn();
+            GlacialComponents.Controls.GLColumn glColumn13 = new GlacialComponents.Controls.GLColumn();
+            GlacialComponents.Controls.GLColumn glColumn14 = new GlacialComponents.Controls.GLColumn();
+            GlacialComponents.Controls.GLColumn glColumn15 = new GlacialComponents.Controls.GLColumn();
+            GlacialComponents.Controls.GLColumn glColumn16 = new GlacialComponents.Controls.GLColumn();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApps));
             this.label1 = new System.Windows.Forms.Label();
             this.glacialList1 = new GlacialComponents.Controls.GlacialList();
@@ -83,61 +85,79 @@
             this.glacialList1.AutoHeight = true;
             this.glacialList1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.glacialList1.BackgroundStretchToFit = true;
-            glColumn1.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.TextBox;
-            glColumn1.CheckBoxes = false;
-            glColumn1.ImageIndex = -1;
-            glColumn1.Name = "cCat";
-            glColumn1.NumericSort = false;
-            glColumn1.Text = "Категория";
-            glColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            glColumn1.Width = 100;
-            glColumn2.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.TextBox;
-            glColumn2.CheckBoxes = false;
-            glColumn2.ImageIndex = -1;
-            glColumn2.Name = "cName";
-            glColumn2.NumericSort = false;
-            glColumn2.Text = "Название";
-            glColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            glColumn2.Width = 100;
-            glColumn3.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.None;
-            glColumn3.CheckBoxes = false;
-            glColumn3.ImageIndex = -1;
-            glColumn3.Name = "сPath";
-            glColumn3.NumericSort = false;
-            glColumn3.Text = "Путь";
-            glColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            glColumn3.Width = 200;
-            glColumn4.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.UserType;
-            glColumn4.CheckBoxes = false;
-            glColumn4.ImageIndex = -1;
-            glColumn4.Name = "fSel";
-            glColumn4.NumericSort = false;
-            glColumn4.Text = "Column";
-            glColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            glColumn4.Width = 17;
-            glColumn5.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.None;
-            glColumn5.CheckBoxes = false;
-            glColumn5.ImageIndex = -1;
-            glColumn5.Name = "fIcon";
-            glColumn5.NumericSort = false;
-            glColumn5.Text = "Иконка";
-            glColumn5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            glColumn5.Width = 200;
-            glColumn6.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.None;
-            glColumn6.CheckBoxes = false;
-            glColumn6.ImageIndex = -1;
-            glColumn6.Name = "fSelIC";
-            glColumn6.NumericSort = false;
-            glColumn6.Text = "Column";
-            glColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            glColumn6.Width = 17;
+            glColumn9.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.TextBox;
+            glColumn9.CheckBoxes = false;
+            glColumn9.ImageIndex = -1;
+            glColumn9.Name = "cCat";
+            glColumn9.NumericSort = false;
+            glColumn9.Text = "Категория";
+            glColumn9.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            glColumn9.Width = 100;
+            glColumn10.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.TextBox;
+            glColumn10.CheckBoxes = false;
+            glColumn10.ImageIndex = -1;
+            glColumn10.Name = "cName";
+            glColumn10.NumericSort = false;
+            glColumn10.Text = "Название";
+            glColumn10.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            glColumn10.Width = 100;
+            glColumn11.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.None;
+            glColumn11.CheckBoxes = false;
+            glColumn11.ImageIndex = -1;
+            glColumn11.Name = "сPath";
+            glColumn11.NumericSort = false;
+            glColumn11.Text = "Путь";
+            glColumn11.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            glColumn11.Width = 200;
+            glColumn12.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.UserType;
+            glColumn12.CheckBoxes = false;
+            glColumn12.ImageIndex = -1;
+            glColumn12.Name = "fSel";
+            glColumn12.NumericSort = false;
+            glColumn12.Text = "Column";
+            glColumn12.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            glColumn12.Width = 17;
+            glColumn13.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.None;
+            glColumn13.CheckBoxes = false;
+            glColumn13.ImageIndex = -1;
+            glColumn13.Name = "fIcon";
+            glColumn13.NumericSort = false;
+            glColumn13.Text = "Иконка";
+            glColumn13.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            glColumn13.Width = 200;
+            glColumn14.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.None;
+            glColumn14.CheckBoxes = false;
+            glColumn14.ImageIndex = -1;
+            glColumn14.Name = "fSelIC";
+            glColumn14.NumericSort = false;
+            glColumn14.Text = "Column";
+            glColumn14.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            glColumn14.Width = 17;
+            glColumn15.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.TextBox;
+            glColumn15.CheckBoxes = false;
+            glColumn15.ImageIndex = -1;
+            glColumn15.Name = "fICID";
+            glColumn15.NumericSort = false;
+            glColumn15.Text = "Номер Иконки";
+            glColumn15.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            glColumn15.Width = 100;
+            glColumn16.ActivatedEmbeddedType = GlacialComponents.Controls.GLActivatedEmbeddedTypes.TextBox;
+            glColumn16.CheckBoxes = false;
+            glColumn16.ImageIndex = -1;
+            glColumn16.Name = "fParams";
+            glColumn16.NumericSort = false;
+            glColumn16.Text = "Параметры";
+            glColumn16.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            glColumn16.Width = 100;
             this.glacialList1.Columns.AddRange(new GlacialComponents.Controls.GLColumn[] {
-            glColumn1,
-            glColumn2,
-            glColumn3,
-            glColumn4,
-            glColumn5,
-            glColumn6});
+            glColumn9,
+            glColumn10,
+            glColumn11,
+            glColumn12,
+            glColumn13,
+            glColumn14,
+            glColumn15,
+            glColumn16});
             this.glacialList1.ControlStyle = GlacialComponents.Controls.GLControlStyles.Normal;
             this.glacialList1.FullRowSelect = true;
             this.glacialList1.GridColor = System.Drawing.Color.LightGray;
@@ -162,12 +182,13 @@
             this.glacialList1.SelectionColor = System.Drawing.Color.DarkBlue;
             this.glacialList1.ShowBorder = true;
             this.glacialList1.ShowFocusRect = false;
-            this.glacialList1.Size = new System.Drawing.Size(776, 335);
+            this.glacialList1.Size = new System.Drawing.Size(838, 335);
             this.glacialList1.SortType = GlacialComponents.Controls.SortTypes.InsertionSort;
             this.glacialList1.SuperFlatHeaderColor = System.Drawing.Color.White;
             this.glacialList1.TabIndex = 4;
             this.glacialList1.Text = "glacialList1";
             this.glacialList1.SelectedIndexChanged += new GlacialComponents.Controls.GlacialList.ClickedEventHandler(this.glacialList1_SelectedIndexChanged);
+            this.glacialList1.Click += new System.EventHandler(this.glacialList1_Click);
             this.glacialList1.DragDrop += new System.Windows.Forms.DragEventHandler(this.glacialList1_DragDrop);
             // 
             // btnFileSelect
@@ -207,7 +228,7 @@
             // openFileDialog2
             // 
             this.openFileDialog2.DereferenceLinks = false;
-            this.openFileDialog2.Filter = "Icon Containers(*.exe, *.ico)|*.exe;*.ico";
+            this.openFileDialog2.Filter = "Icon Containers(*.exe, *.ico, *.dll)|*.exe;*.ico;*.dll";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
             // 
             // btnMvDn
@@ -309,7 +330,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(268, 9);
+            this.label4.Location = new System.Drawing.Point(324, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 14;
@@ -317,10 +338,10 @@
             // 
             // tbMessage
             // 
-            this.tbMessage.Location = new System.Drawing.Point(373, 7);
+            this.tbMessage.Location = new System.Drawing.Point(433, 7);
             this.tbMessage.Multiline = true;
             this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(415, 46);
+            this.tbMessage.Size = new System.Drawing.Size(417, 46);
             this.tbMessage.TabIndex = 15;
             this.tbMessage.Text = "Все впорядке. Время идёт...\r\nОплачено: Кровно заработанными Окончание: Как получи" +
     "тся";
@@ -329,7 +350,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(268, 62);
+            this.label5.Location = new System.Drawing.Point(324, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 13);
             this.label5.TabIndex = 16;
@@ -337,9 +358,9 @@
             // 
             // tbTimeLabel
             // 
-            this.tbTimeLabel.Location = new System.Drawing.Point(373, 59);
+            this.tbTimeLabel.Location = new System.Drawing.Point(433, 59);
             this.tbTimeLabel.Name = "tbTimeLabel";
-            this.tbTimeLabel.Size = new System.Drawing.Size(415, 20);
+            this.tbTimeLabel.Size = new System.Drawing.Size(417, 20);
             this.tbTimeLabel.TabIndex = 17;
             this.tbTimeLabel.Text = "Начало:   Вчера   Окончание:    Завтра   Осталось:   Сегодня";
             // 
@@ -347,7 +368,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 471);
+            this.ClientSize = new System.Drawing.Size(862, 471);
             this.Controls.Add(this.tbTimeLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbMessage);

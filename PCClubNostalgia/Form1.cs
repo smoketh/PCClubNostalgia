@@ -1,15 +1,18 @@
-﻿using LiteDB;
+﻿//using LiteDB;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft;
+using Newtonsoft.Json;
 
 namespace PCClubNostalgia
 {
@@ -17,20 +20,22 @@ namespace PCClubNostalgia
     {
         public class VConfig
         {
-            public ObjectId Id { get; set; }
-            public int pcNumber { get; set; }
-            public string nick { get; set; }
-            public string traffic { get; set; }
-            public string message { get; set; }
-            public string timeStatus { get; set; }
+            //public ObjectId Id { get; set; }
+            public int pcNumber { get; set; } = 2;
+            public string nick { get; set; } = "user";
+            public string traffic { get; set; } = "";
+            public string message { get; set; } = "Все впорядке. Время идёт...\r\nОплачено: Кровно заработанными Окончание: Как получится";
+            public string timeStatus { get; set; } = "Начало:   Вчера   Окончание:    Завтра   Осталось:   Сегодня";
+            public List<AppPather> paths { get; set; } = new List<AppPather>();
         }
+        const string CONFIGLOC = @"config.json";
         System.Timers.Timer secUpdater;
         TabControlV nCont;
-        public LiteDatabase db;
-        public LiteCollection<AppPather> paths;
-        public LiteCollection<VConfig> vcfgc;
-        List<AppPather> lst;
-        public VConfig vcfg;
+        //public LiteDatabase db;
+        //public LiteCollection<AppPather> paths;
+        public VConfig config;
+        //List<AppPather> lst;
+        //public VConfig vcfg;
 
         private void OnApplicationExit(object sender, EventArgs e)
         {
@@ -38,28 +43,41 @@ namespace PCClubNostalgia
             if (secUpdater != null) secUpdater.Stop();
         }
 
+        private VConfig LoadConfig(string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                // Return a default config if the file doesn't exist yet
+                var nVC = new VConfig();
+                nVC.paths.Add(new AppPather());
+                return nVC;
+            }
+
+            string json = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<VConfig>(json);
+        }
+
+        internal void SaveRegularConfig()
+        {
+            SaveConfig(CONFIGLOC, config);
+        }
+
+        private void SaveConfig(string filePath, VConfig config)
+        {
+            string json = JsonConvert.SerializeObject(config, Formatting.Indented);
+            File.WriteAllText(filePath, json);
+        }
+
         public Form1()
         {
             Application.ApplicationExit += new EventHandler(this.OnApplicationExit);
             System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
-            db= new LiteDatabase(@"Software.db");
-            paths = db.GetCollection<AppPather>() as LiteCollection<AppPather>;
-            vcfgc = db.GetCollection<VConfig>() as LiteCollection<VConfig>;
-            if(vcfgc.Count()==0)
-            {
-                vcfg = new VConfig()
-                {
-                    pcNumber = 2,
-                    message = "Все впорядке. Время идёт...\r\nОплачено: Кровно заработанными Окончание: Как получится",
-                    nick = "user",
-                    timeStatus = "Начало:   Вчера   Окончание:    Завтра   Осталось:   Сегодня",
-                    traffic = ""
-                };
-                vcfgc.Insert(vcfg);
-            }
-            else
-                vcfg = vcfgc.FindAll().ToList()[0];
+            //Newtonsoft.Json.
+            //db= new LiteDatabase(@"Software.db");
+            //paths = db.GetCollection<AppPather>() as LiteCollection<AppPather>;
+            config = LoadConfig(CONFIGLOC); //db.GetCollection<VConfig>() as LiteCollection<VConfig>;
+            
 
             //this.tabMain.DrawMode = TabDrawMode.OwnerDrawFixed;
             //this.tabMain.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabMain_DrawItem);
@@ -99,27 +117,16 @@ namespace PCClubNostalgia
         public void AddApps()
         {
 
-            lblMsg.Text = vcfg.message;
-            lblNick.Text = vcfg.nick;
-            lblNum.Text = vcfg.pcNumber.ToString();
-            lblTimeMessage.Text = vcfg.timeStatus;
-            lblTraffic.Text = vcfg.traffic;
+            lblMsg.Text = config.message;
+            lblNick.Text = config.nick;
+            lblNum.Text = config.pcNumber.ToString();
+            lblTimeMessage.Text = config.timeStatus;
+            lblTraffic.Text = config.traffic;
             nCont.TabPages.Clear();
-            if (paths.Count() == 0)
-            {
-                AppPather nPth = new AppPather()
-                {
-                    category = "Office",
-                    name = "Notepad",
-                    path = @"C:\Windows\notepad.exe",
-                    iconPath = @"C:\Windows\notepad.exe"
-                };
-                paths.Insert(nPth);
-            }
-            lst = paths.FindAll().ToList();
+            //lst = paths.FindAll().ToList();
             
             List<string> Categories = new List<string>();
-            foreach (AppPather appath in lst)
+            foreach (AppPather appath in config.paths)
             {
                 if (!Categories.Contains(appath.category))
                 {
@@ -130,7 +137,7 @@ namespace PCClubNostalgia
             foreach (string category in Categories)
             {
                 var nTab = AddTab(category);
-                var cCatLst = lst.Where(x => x.category == category).ToList();
+                var cCatLst = config.paths.Where(x => x.category == category).ToList();
                 foreach (AppPather appath in cCatLst)
                 {
                     Button vBtn = new Button();
@@ -144,9 +151,16 @@ namespace PCClubNostalgia
                     if (appath.iconPath == "" || appath.iconPath==null) appath.iconPath = appath.path;
                     if (System.IO.File.Exists(appath.iconPath))
                     {
-                        Icon ico = Icon.ExtractAssociatedIcon(appath.iconPath);
-                        vBtn.Image = ico.ToBitmap();
-                        
+                        var fIco=IconHelper.GetIconFromFile(appath.iconPath, appath.iconIndex);
+                        if (fIco != null)
+                        {
+                            vBtn.Image = fIco;
+                        }
+                        else
+                        {
+                            Icon ico = Icon.ExtractAssociatedIcon(appath.iconPath);
+                            vBtn.Image = ico.ToBitmap();
+                        }
                         vBtn.TextAlign = ContentAlignment.BottomCenter;
                     }
                     vBtn.FlatStyle = FlatStyle.Popup;
@@ -205,11 +219,11 @@ namespace PCClubNostalgia
         public void OpenApp(object sender, EventArgs e)
         {
             var btn = sender as Button;
-            var obj = paths.FindOne(x => x.Id == btn.Tag as ObjectId);
+            var obj = config.paths.Find(x => x.Id == (Guid)btn.Tag);
             if (obj == null) return;
             if(System.IO.File.Exists(obj.path))
             {
-                Process.Start(obj.path);
+                Process.Start(obj.path, obj.launchParams);
             }
             
         }
@@ -348,13 +362,14 @@ namespace PCClubNostalgia
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            vcfg.message = lblMsg.Text;
-            vcfg.nick = lblNick.Text;
-            vcfg.pcNumber = System.Convert.ToInt32(lblNum.Text);
-            vcfg.timeStatus = lblTimeMessage.Text;
-            vcfg.traffic = lblTraffic.Text;
-            vcfgc.DeleteAll();
-            vcfgc.Insert(vcfg);
+            config.message = lblMsg.Text;
+            config.nick = lblNick.Text;
+            config.pcNumber = System.Convert.ToInt32(lblNum.Text);
+            config.timeStatus = lblTimeMessage.Text;
+            config.traffic = lblTraffic.Text;
+            SaveRegularConfig();
+            //config.DeleteAll();
+            //config.Insert(vcfg);
         }
     }
 }
