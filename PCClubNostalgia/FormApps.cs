@@ -228,19 +228,25 @@ namespace PCClubNostalgia
         {
             glacialList1.Items[(int)glacialList1.SelectedIndicies[0]].SubItems[4].Text =
                 openFileDialog2.FileNames[0];
-            string cFile;
-            int cIndex;
-            bool iconPicked=IconPicker.Show(this.Handle, out cFile, out cIndex, openFileDialog2.FileNames[0]);
-            if(iconPicked)
-            {
-                glacialList1.Items[(int)glacialList1.SelectedIndicies[0]].SubItems[4].Text = cFile;
-                glacialList1.Items[(int)glacialList1.SelectedIndicies[0]].SubItems[6].Text = cIndex.ToString();
-            }
+
+
+            
         }
 
         private void btnIconSelect_Click(object sender, EventArgs e)
         {
-            openFileDialog2.ShowDialog();
+            if(openFileDialog2.ShowDialog(this) == DialogResult.OK)
+            {
+                string cFile;
+                int cIndex;
+                var mFileName = glacialList1.Items[(int)glacialList1.SelectedIndicies[0]].SubItems[4].Text;
+                bool iconPicked = IconPicker.Show(this.Handle, out cFile, out cIndex, mFileName);
+                if (iconPicked)
+                {
+                    glacialList1.Items[(int)glacialList1.SelectedIndicies[0]].SubItems[4].Text = cFile;
+                    glacialList1.Items[(int)glacialList1.SelectedIndicies[0]].SubItems[6].Text = cIndex.ToString();
+                }
+            }
         }
 
         private void glacialList1_DragDrop(object sender, DragEventArgs e)
